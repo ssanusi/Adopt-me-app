@@ -4,7 +4,7 @@ import { Router, Link } from "@reach/router";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 export default function App() {
-  const themeHook = useState("darkblue");
+  const themeHook = useState("peru");
   return (
     <ThemeContext.Provider value={themeHook}>
       <div>
