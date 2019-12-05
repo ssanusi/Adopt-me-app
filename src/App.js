@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import SearchParams from "./SearchParams";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
+import Navbar from "./Nav";
 export default function App() {
   const themeHook = useState("peru");
   return (
     <ThemeContext.Provider value={themeHook}>
       <div>
-        <header>
-          <Link to="/">Adopt Me!</Link>
-        </header>
+       <Navbar />
         <Router>
           <SearchParams path="/" />
           <Details path="/details/:id" />
